@@ -41,8 +41,33 @@ startGiffyGram();
 const applicationElement = document.querySelector(".giffygram");
 
 // how we react to the click (this looks for more specific target IDs):
+
+// listen for clicks on logout
 applicationElement.addEventListener("click", event => {
 	if (event.target.id === "logout"){
 		console.log("You clicked on logout")
+	}
+})
+
+// listen for clicks on footer dropdown
+applicationElement.addEventListener("change", event => {
+	if (event.target.id === "yearSelection") {
+	  const yearAsNumber = parseInt(event.target.value)
+  
+	  console.log(`User wants to see posts since ${yearAsNumber}`)
+	}
+  })
+
+// listen for clicks on DM icon (directMessageIcon)
+applicationElement.addEventListener("click", event => {
+	if (event.target.id === "directMessageIcon"){
+		alert("You clicked the DM icon")
+	}
+})
+
+  // listen for clicks on Giffygram icon (PB-jar)
+  applicationElement.addEventListener("click", event => {
+	if (event.target.id === "PB-jar"){
+		alert("You clicked the Giffygram icon")
 	}
 })
