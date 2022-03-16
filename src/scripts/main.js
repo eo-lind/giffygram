@@ -71,3 +71,12 @@ applicationElement.addEventListener("click", event => {
 		alert("You clicked the Giffygram icon")
 	}
 })
+
+// listen for clicks on specific post
+applicationElement.addEventListener("click", (event) => {
+	
+	if (event.target.id.startsWith("edit")){
+		console.log("post clicked", event.target.id.split("--"))
+		console.log("the id is", event.target.id.split("--")[1])
+	}
+})
