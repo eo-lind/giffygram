@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "name": "Bryan",
+      "email": "bryan@bn.com",
+      "id": 1
+    },
+    {
+      "name": "Rupert",
+      "email": "rupert@bn.com",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "imageURL": "https://media.giphy.com/media/26ufaqo3YRPQ24HPW/giphy.gif",
+      "userId": 5,
+      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "timestamp": "03-16-2022",
+      "title": "Sandy Passage"
+    },
+    {
+      "id": 2,
+      "imageURL": "https://media.giphy.com/media/No6FOLctYEbPq/giphy.gif",
+      "userId": 4,
+      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "timestamp": "03-15-2022",
+      "title": "I'm pleasant, but I have issues"
+    },
+    {
+      "id": 3,
+      "imageURL": "https://media.giphy.com/media/l0FecnkPKOOveZNrq/giphy.gif",
+      "userId": 6,
+      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "timestamp": "03-16-2022",
+      "title": "Stewart"
+    },
+    {
+        "imageURL": "https://media.giphy.com/media/3o7TKspm71nLp26gE0/giphy.gif",
+        "userId": 6,
+        "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+        "timestamp": "03-16-2022",
+        "title": "The Heat",
+        "id": 2
+    },
+    {
+      "id": 1,
+      "imageURL": "https://media.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif",
+      "userId": 6,
+      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "timestamp": "03-15-2022",
+      "title": "Enhanced global utilisation"
+    }
+  ],
+  "likes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "postId": 2
+    }
+  ]
+}
