@@ -91,6 +91,22 @@
       "userId": 1,
       "timestamp": 1647546758048,
       "id": 10
+    },
+    {
+      "title": "I AM big",
+      "imageURL": "https://media.giphy.com/media/JT1bcuCpEBymtXbwgf/giphy.gif",
+      "description": "it was the pictures that got small",
+      "userId": 1,
+      "timestamp": 1647547863655,
+      "id": 11
+    },
+    {
+      "title": "We had faces",
+      "imageURL": "https://media.giphy.com/media/fFGSQhhrbAbIY/giphy.gif",
+      "description": "blah",
+      "userId": 1,
+      "timestamp": 1647548158657,
+      "id": 12
     }
   ],
   "likes": [

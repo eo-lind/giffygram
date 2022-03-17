@@ -117,8 +117,12 @@ applicationElement.addEventListener("click", event => {
 	
   
 		createPost(postObject)
-		.then(showPostEntry())
-		.then(showPostList())
+		.then(()=>{
+			showPostList()
+			const title = document.querySelector("input[name='postTitle']").value=""
+		const url = document.querySelector("input[name='postURL']").value=""
+		const description = document.querySelector("textarea[name='postDescription']").value=""
+		})
 	}
   })
 
