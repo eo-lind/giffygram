@@ -18,6 +18,16 @@ export const getUsers = () => {
     })
 }
 
+export const createUserObj = userObj => {
+
+    return fetch("http://localhost:8088/users")
+    .then(response => response.json())
+    .then(parsedResponse => {
+        // do something with response here
+        return parsedResponse;
+    })
+}
+
 export const getPosts = () => {
 
     return fetch("http://localhost:8088/posts?_sort=id&_order=desc")

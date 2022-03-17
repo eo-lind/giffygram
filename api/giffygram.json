@@ -17,7 +17,7 @@
       "imageURL": "https://media.giphy.com/media/26ufaqo3YRPQ24HPW/giphy.gif",
       "userId": 1,
       "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-      "timestamp": 1647461074,
+      "timestamp": 1618834332 * 1000,
       "title": "Sandy Passage"
     },
     {
@@ -94,19 +94,11 @@
     },
     {
       "title": "I AM big",
-      "imageURL": "https://media.giphy.com/media/JT1bcuCpEBymtXbwgf/giphy.gif",
+      "imageURL": "https://media.giphy.com/media/11myV77GyYC8eI/giphy.gif",
       "description": "it was the pictures that got small",
       "userId": 1,
       "timestamp": 1647547863655,
       "id": 11
-    },
-    {
-      "title": "We had faces",
-      "imageURL": "https://media.giphy.com/media/fFGSQhhrbAbIY/giphy.gif",
-      "description": "blah",
-      "userId": 1,
-      "timestamp": 1647548158657,
-      "id": 12
     }
   ],
   "likes": [
