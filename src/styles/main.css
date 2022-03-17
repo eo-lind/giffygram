@@ -6,7 +6,7 @@
 /*Typography
 --------------------------------------------------------------*/
 
-body, button, input, select, textarea {
+body {
     color: #404040;
     font-family: "Comfortaa", Arial, sans-serif;
     font-size: 1rem;
@@ -15,6 +15,44 @@ body, button, input, select, textarea {
     margin: 0;
 }
 
+input, select, textarea {
+    color: #404040;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 5px;
+    margin: 0;
+    background-color: #ddfafc;
+    border-radius: 3px;
+}
+
+button {
+    color: #404040;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 5px;
+    margin: 0;
+    background-color: #ddfafc;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: 5px 5px #00D7DF;
+}
+
+button:active {
+    color: #404040;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 5px;
+    margin: 0;
+    background-color: #00D7DF;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Patua One", serif;
     letter-spacing: 2px;
@@ -22,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .giffygram {
     margin-bottom: 50px;
+    margin-top: 70px;
 }
 
 .actionIcon {
