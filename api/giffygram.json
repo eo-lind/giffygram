@@ -75,6 +75,22 @@
       "userId": 1,
       "timestamp": 1647544166665,
       "id": 8
+    },
+    {
+      "title": "Dumb",
+      "imageURL": "https://media.giphy.com/media/i2I3sLKrJQsfvv0Tyc/giphy.gif",
+      "description": "Proin eu mi. Nulla ac enim.",
+      "userId": 1,
+      "timestamp": 1647544787923,
+      "id": 9
+    },
+    {
+      "title": "Wrong",
+      "imageURL": "https://media.giphy.com/media/WXtccLGTLB1NS/giphy.gif",
+      "description": "Get used to it",
+      "userId": 1,
+      "timestamp": 1647546758048,
+      "id": 10
     }
   ],
   "likes": [

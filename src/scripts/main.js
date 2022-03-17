@@ -117,6 +117,8 @@ applicationElement.addEventListener("click", event => {
 	
   
 		createPost(postObject)
+		.then(showPostEntry())
+		.then(showPostList())
 	}
   })
 

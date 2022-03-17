@@ -27,7 +27,6 @@ export const getPosts = () => {
         return parsedResponse;
     })
 }
-// how will we pass object into this function?
 
 export const createPost = postObj => {
     return fetch("http://localhost:8088/posts", {
