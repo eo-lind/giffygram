@@ -114,6 +114,7 @@ applicationElement.addEventListener("click", event => {
 		  userId: getLoggedInUser().id,
 		  timestamp: Date.now()
 	  }
+	
   
 		createPost(postObject)
 	}
