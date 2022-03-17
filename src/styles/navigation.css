@@ -64,6 +64,33 @@
     margin-right: 2em;
 }
 
+#logout {
+    color: #404040;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 5px;
+    margin: 0;
+    background-color: #f1c80f;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: 5px 5px #00D7DF;
+}
+
+#logout:active {
+    color: #404040;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 5px;
+    margin: 0;
+    background-color: #00D7DF;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: none;
+    border-width: 1px;
+}
+
 #directMessageIcon {
     cursor: pointer;
 }
