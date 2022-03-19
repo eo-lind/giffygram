@@ -32,7 +32,7 @@ const showPostEntry = () => {
   }
 
 const showPostCount = () => { 
-	//Get a reference to the location on the DOM where the nav will display
+	//Get a reference to the location on the DOM where the post count will display
 	const entryElement = document.querySelector("#postCount");
 	entryElement.innerHTML = countPosts();
   }
@@ -134,6 +134,7 @@ applicationElement.addEventListener("click", event => {
   })
 
 // for filtering posts by year:
+
 applicationElement.addEventListener("change", event => {
 	if (event.target.id === "yearSelection") {
 	  const yearAsNumber = parseInt(event.target.value)

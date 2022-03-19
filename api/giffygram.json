@@ -16,15 +16,15 @@
       "id": 5,
       "imageURL": "https://media.giphy.com/media/26ufaqo3YRPQ24HPW/giphy.gif",
       "userId": 1,
-      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-      "timestamp": 1618834332,
+      "description": "What this is, is that I take sweatpants, and I wrap them around my head.",
+      "timestamp": 	1494769498,
       "title": "Sandy Passage"
     },
     {
       "id": 4,
       "imageURL": "https://media.giphy.com/media/No6FOLctYEbPq/giphy.gif",
       "userId": 1,
-      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "description": "Don't you make that skull face at me, missy!",
       "timestamp": 1618257842,
       "title": "I'm pleasant, but I have issues"
     },
@@ -32,15 +32,15 @@
       "id": 3,
       "imageURL": "https://media.giphy.com/media/l0FecnkPKOOveZNrq/giphy.gif",
       "userId": 1,
-      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "description": "Lowe's Home Improvement on Pico. I'm going to take Benedict Canyon down to Sunset and cut across Doheny.",
       "timestamp": 1588795573,
-      "title": "Stewart"
+      "title": "Stuart"
     },
     {
       "id": 2,
       "imageURL": "https://media.giphy.com/media/3o7TKspm71nLp26gE0/giphy.gif",
       "userId": 21,
-      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "description": "We're about to freak out right now. We're about two seconds away from jumping up on this table and kicking everything in sight, which by the way is our own property.",
       "timestamp": 1557173173,
       "title": "The Heat"
     },
@@ -55,7 +55,7 @@
     {
       "title": "Bebe",
       "imageURL": "https://media.giphy.com/media/JRmUoWNerzMkh9yoW2/giphy.gif",
-      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "description": "Oh, she has no idea the toll a bebe can take on its mother or its mother's mother.",
       "userId": 1,
       "timestamp": 1647543482665,
       "id": 6
@@ -63,7 +63,7 @@
     {
       "title": "No more room in hell",
       "imageURL": "https://media.giphy.com/media/qYjAI5Nss5CHC/giphy.gif",
-      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "description": "Some Kind Of Instinct. Memory Of What They Used To Do. This Was An Important Place In Their Lives.",
       "userId": 1,
       "timestamp": 1647544009398,
       "id": 7
@@ -71,7 +71,7 @@
     {
       "title": "So it be",
       "imageURL": "https://media.giphy.com/media/XDuJUONwqsLoQAe4hL/giphy.gif",
-      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "description": "If it is to be said",
       "userId": 1,
       "timestamp": 1647544166665,
       "id": 8
@@ -79,7 +79,7 @@
     {
       "title": "Dumb",
       "imageURL": "https://media.giphy.com/media/i2I3sLKrJQsfvv0Tyc/giphy.gif",
-      "description": "Proin eu mi. Nulla ac enim.",
+      "description": "I'm dumb, but I'm smart.",
       "userId": 1,
       "timestamp": 1647544787923,
       "id": 9
