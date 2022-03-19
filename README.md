@@ -2,8 +2,8 @@
 
 Giffygram is a single page social media application that allows users to share gif animations. Users simply post a link to the gif as well as a title and brief description, and then it appears in the main feed. Posts can also be filtered by year.
 
-![alt text](images/giffygram-screenshot.png "screenshot of Giffygram")
-![alt text](images/giffygram-ERD.png "Giffygram ERD")
+![alt text](src/images/giffygram-screenshot.png "screenshot of Giffygram")
+![alt text](src/images/giffygram-ERD.png "Giffygram ERD")
 
 
 ##Project Status
