@@ -11,6 +11,7 @@ export const Footer = () => {
                     <option>2019</option>
                     <option>2018</option>
                     <option>2017</option>
+                    <option>1970</option>
                 </select>
                 <span id="postCount">0</span>
             </div>
@@ -19,4 +20,3 @@ export const Footer = () => {
     `
 }
 
-// line 17 gets the current year so it stays up to date
