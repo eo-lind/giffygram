@@ -76,8 +76,8 @@ export const countPosts = () => {
 	return fetch("http://localhost:8088/posts")
     .then(response => response.json())
     .then(parsedResponse => {
-      let postCollection = parsedResponse
-      console.log(postCollection.length)
-      return postCollection.length
+      console.log(parsedResponse.length)
+      return parsedResponse
     })
 }
+
