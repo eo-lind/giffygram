@@ -48,12 +48,6 @@ const showPostCount = () => {
   entryElement.innerHTML = countPosts();
 };
 
-const showEdit = (postObj) => {
-  // this is where the post info to be edited will show up
-  const entryElement = document.querySelector(".entryForm");
-  entryElement.innerHTML = PostEdit(postObj);
-};
-
 const startGiffyGram = () => {
   showNavBar();
   showPostList();
@@ -155,7 +149,6 @@ applicationElement.addEventListener("click", (event) => {
   }
 });
 
-
 // listen for clicks on edit button
 
 applicationElement.addEventListener("click", (event) => {
@@ -179,7 +172,6 @@ const showEdit = (postObj) => {
 applicationElement.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.id.startsWith("updatePost")) {
-
     const postId = event.target.id.split("--")[1];
 
     //collect all the details into an object

@@ -28,5 +28,3 @@ export const PostEdit = (postObj) => {
 	</div>
 	`;
 };
-
-// test
