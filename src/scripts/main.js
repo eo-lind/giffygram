@@ -7,11 +7,14 @@ import {
   usePostCollection,
   countPosts,
   deletePost,
+  getSinglePost,
+  updatePost,
 } from "./data/DataManager.js";
 import { PostList } from "./feed/PostList.js";
 import { NavBar } from "./nav/NavBar.js";
 import { Footer } from "./nav/Footer.js";
 import { PostEntry } from "./feed/PostEntry.js";
+import { PostEdit } from "./feed/PostEdit.js";
 
 const showNavBar = () => {
   //Get a reference to the location on the DOM where the nav will display
@@ -43,6 +46,12 @@ const showPostCount = () => {
   //Get a reference to the location on the DOM where the post count will display
   const entryElement = document.querySelector("#postCount");
   entryElement.innerHTML = countPosts();
+};
+
+const showEdit = (postObj) => {
+  // this is where the post info to be edited will show up
+  const entryElement = document.querySelector(".entryForm");
+  entryElement.innerHTML = PostEdit(postObj);
 };
 
 const startGiffyGram = () => {
@@ -142,6 +151,47 @@ applicationElement.addEventListener("click", (event) => {
     const postId = event.target.id.split("--")[1];
     deletePost(postId).then((response) => {
       showPostList();
+    });
+  }
+});
+
+// listen for clicks on the edit button
+applicationElement.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.id.startsWith("edit")) {
+    const postId = event.target.id.split("--")[1];
+    getSinglePost(postId).then((response) => {
+      showEdit(response);
+    });
+  }
+});
+
+// listens for clicks when user submits their edit to a post
+
+applicationElement.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.id.startsWith("updatePost")) {
+    const postId = event.target.id.split("__")[1];
+    //collect all the details into an object
+    const title = document.querySelector("input[name='postTitle']").value;
+    const url = document.querySelector("input[name='postURL']").value;
+    const description = document.querySelector(
+      "textarea[name='postDescription']"
+    ).value;
+    const timestamp = document.querySelector("input[name='postTime']").value;
+
+    const postObject = {
+      title: title,
+      imageURL: url,
+      description: description,
+      userId: getLoggedInUser().id,
+      timestamp: parseInt(timestamp),
+      id: parseInt(postId),
+    };
+
+    updatePost(postObject).then((response) => {
+      showPostList();
+      showPostEntry();
     });
   }
 });

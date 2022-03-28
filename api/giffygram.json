@@ -99,6 +99,14 @@
       "userId": 1,
       "timestamp": 1648493160339,
       "id": 13
+    },
+    {
+      "title": "STOP IT",
+      "imageURL": "https://media.giphy.com/media/5G98t8QjqBLK8/giphy.gif",
+      "description": "Don't even try it.",
+      "userId": 1,
+      "timestamp": 1648495142665,
+      "id": 14
     }
   ],
   "likes": []
