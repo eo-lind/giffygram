@@ -6,6 +6,7 @@ import {
   createPost,
   usePostCollection,
   countPosts,
+  deletePost,
 } from "./data/DataManager.js";
 import { PostList } from "./feed/PostList.js";
 import { NavBar } from "./nav/NavBar.js";
@@ -133,6 +134,18 @@ applicationElement.addEventListener("click", (event) => {
       description = document.querySelector(
         "textarea[name='postDescription']"
       ).value = "";
+    });
+  }
+});
+
+// listen for clicks on the delete button
+
+applicationElement.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.id.startsWith("delete")) {
+    const postId = event.target.id.split("--")[1];
+    deletePost(postId).then((response) => {
+      showPostList();
     });
   }
 });

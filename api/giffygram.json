@@ -37,22 +37,6 @@
       "title": "Stuart"
     },
     {
-      "id": 2,
-      "imageURL": "https://media.giphy.com/media/3o7TKspm71nLp26gE0/giphy.gif",
-      "userId": 21,
-      "description": "We're about to freak out right now. We're about two seconds away from jumping up on this table and kicking everything in sight, which by the way is our own property.",
-      "timestamp": 1557173173,
-      "title": "The Heat"
-    },
-    {
-      "id": 1,
-      "imageURL": "https://media.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif",
-      "userId": 2,
-      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-      "timestamp": 1545854773,
-      "title": "Enhanced global utilisation"
-    },
-    {
       "title": "Bebe",
       "imageURL": "https://media.giphy.com/media/JRmUoWNerzMkh9yoW2/giphy.gif",
       "description": "Oh, she has no idea the toll a bebe can take on its mother or its mother's mother.",
@@ -109,11 +93,5 @@
       "id": 12
     }
   ],
-  "likes": [
-    {
-      "id": 1,
-      "userId": 1,
-      "postId": 2
-    }
-  ]
+  "likes": []
 }
