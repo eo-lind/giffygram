@@ -7,11 +7,14 @@ import {
   usePostCollection,
   countPosts,
   deletePost,
+  getSinglePost,
+  updatePost,
 } from "./data/DataManager.js";
 import { PostList } from "./feed/PostList.js";
 import { NavBar } from "./nav/NavBar.js";
 import { Footer } from "./nav/Footer.js";
 import { PostEntry } from "./feed/PostEntry.js";
+import { PostEdit } from "./feed/PostEdit.js";
 
 const showNavBar = () => {
   //Get a reference to the location on the DOM where the nav will display
@@ -146,6 +149,53 @@ applicationElement.addEventListener("click", (event) => {
     const postId = event.target.id.split("--")[1];
     deletePost(postId).then((response) => {
       showPostList();
+    });
+  }
+});
+
+// listen for clicks on edit button
+applicationElement.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.id.startsWith("edit")) {
+    const postId = event.target.id.split("--")[1];
+    getSinglePost(postId).then((response) => {
+      showEdit(response);
+    });
+  }
+});
+
+// put data to be edited into edit form
+const showEdit = (postObj) => {
+  const entryElement = document.querySelector(".entryForm");
+  entryElement.innerHTML = PostEdit(postObj);
+};
+
+// when user submits edits on post
+
+applicationElement.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.id.startsWith("updatePost")) {
+    const postId = event.target.id.split("--")[1];
+    //collect all the details into an object
+    const title = document.querySelector("input[name='postTitle']").value;
+    const url = document.querySelector("input[name='postURL']").value;
+    const description = document.querySelector(
+      "textarea[name='postDescription']"
+    ).value;
+    const timestamp = document.querySelector("input[name='postTime']").value;
+
+    const postObject = {
+      title: title,
+      imageURL: url,
+      description: description,
+      userId: getLoggedInUser().id,
+      timestamp: parseInt(timestamp),
+      id: parseInt(postId),
+    };
+
+    updatePost(postObject).then((response) => {
+      showPostList();
+      showPostEntry();
     });
   }
 });

@@ -87,10 +87,18 @@
     {
       "title": "Ronnie D",
       "imageURL": "https://media.giphy.com/media/xT0GqBqtXjLWmWYFCE/giphy.gif",
-      "description": "Fuzz",
+      "description": "Fuzz!",
       "userId": 1,
       "timestamp": 1647613339776,
       "id": 12
+    },
+    {
+      "title": "STOP IT.",
+      "imageURL": "https://media.giphy.com/media/5G98t8QjqBLK8/giphy.gif",
+      "description": "Don't even think about it.",
+      "userId": 1,
+      "timestamp": 1648500651058,
+      "id": 13
     }
   ],
   "likes": []
