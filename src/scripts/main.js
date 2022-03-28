@@ -103,7 +103,7 @@ applicationElement.addEventListener("click", (event) => {
 // listen for cancel and submit buttton
 applicationElement.addEventListener("click", (event) => {
   if (event.target.id === "newPost__cancel") {
-    //clear the input fields
+    showPostEntry();
   }
 });
 
@@ -129,11 +129,7 @@ applicationElement.addEventListener("click", (event) => {
 
     createPost(postObject).then(() => {
       showPostList();
-      title = document.querySelector("input[name='postTitle']").value = "";
-      url = document.querySelector("input[name='postURL']").value = "";
-      description = document.querySelector(
-        "textarea[name='postDescription']"
-      ).value = "";
+      showPostEntry();
     });
   }
 });
