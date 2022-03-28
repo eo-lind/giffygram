@@ -23,10 +23,8 @@ export const PostEdit = (postObj) => {
 		
 		<input type="hidden" value="${postObj.id}" name="postId">
 		<input type="hidden" value="${postObj.timestamp}" name="postTime">	
-		<button id="updatePost__${postObj.id}">Update</button>
-		<button id="newPost__cancel">Cancel</button>
+		<button id="updatePost--${postObj.id}">Update</button>
+		<button id="newPost--cancel">Cancel</button>
 	</div>
 	`;
 };
-
-// lines 24 and 25 are hiding the inputs for post ID and timestamp because we don't want to edit those properties, but we do want them to get put back into the database

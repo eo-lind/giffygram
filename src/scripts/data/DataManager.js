@@ -88,16 +88,18 @@ export const deletePost = (postId) => {
   }).then((response) => response.json());
 };
 
-// TO EDIT A POST
 
-// first you need to get the single post
+// EDIT POST
+
+// retrieves the post by id
 export const getSinglePost = (postId) => {
   return fetch(`http://localhost:8088/posts/${postId}`).then((response) =>
     response.json()
   );
 };
 
-// this will replace the original version of the post object in the database (it's using "PUT", not "POST", so it's not creating a new object)
+// will replace the data in the post with matching id rather than creating a new post (because we used "PUT" method instead of "POST")
+
 export const updatePost = (postObj) => {
   return fetch(`http://localhost:8088/posts/${postObj.id}`, {
     method: "PUT",

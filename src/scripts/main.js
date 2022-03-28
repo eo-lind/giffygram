@@ -155,7 +155,9 @@ applicationElement.addEventListener("click", (event) => {
   }
 });
 
-// listen for clicks on the edit button
+
+// listen for clicks on edit button
+
 applicationElement.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.id.startsWith("edit")) {
@@ -166,12 +168,20 @@ applicationElement.addEventListener("click", (event) => {
   }
 });
 
-// listens for clicks when user submits their edit to a post
+// put data to be edited into edit form
+const showEdit = (postObj) => {
+  const entryElement = document.querySelector(".entryForm");
+  entryElement.innerHTML = PostEdit(postObj);
+};
+
+// when user submits edits on post
 
 applicationElement.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.id.startsWith("updatePost")) {
-    const postId = event.target.id.split("__")[1];
+
+    const postId = event.target.id.split("--")[1];
+
     //collect all the details into an object
     const title = document.querySelector("input[name='postTitle']").value;
     const url = document.querySelector("input[name='postURL']").value;
