@@ -17,7 +17,7 @@
       "imageURL": "https://media.giphy.com/media/26ufaqo3YRPQ24HPW/giphy.gif",
       "userId": 1,
       "description": "What this is, is that I take sweatpants, and I wrap them around my head.",
-      "timestamp": 	1494769498,
+      "timestamp": 1494769498,
       "title": "Sandy Passage"
     },
     {
@@ -35,22 +35,6 @@
       "description": "Lowe's Home Improvement on Pico. I'm going to take Benedict Canyon down to Sunset and cut across Doheny.",
       "timestamp": 1588795573,
       "title": "Stuart"
-    },
-    {
-      "id": 2,
-      "imageURL": "https://media.giphy.com/media/3o7TKspm71nLp26gE0/giphy.gif",
-      "userId": 21,
-      "description": "We're about to freak out right now. We're about two seconds away from jumping up on this table and kicking everything in sight, which by the way is our own property.",
-      "timestamp": 1557173173,
-      "title": "The Heat"
-    },
-    {
-      "id": 1,
-      "imageURL": "https://media.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif",
-      "userId": 2,
-      "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-      "timestamp": 1545854773,
-      "title": "Enhanced global utilisation"
     },
     {
       "title": "Bebe",
@@ -109,11 +93,5 @@
       "id": 12
     }
   ],
-  "likes": [
-    {
-      "id": 1,
-      "userId": 1,
-      "postId": 2
-    }
-  ]
+  "likes": []
 }
