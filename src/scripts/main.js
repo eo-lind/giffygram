@@ -47,7 +47,7 @@ const showPostCount = () => {
   const entryElement = document.querySelector("#postCount");
   entryElement.innerHTML = countPosts();
 };
-
+//
 const startGiffyGram = () => {
   showNavBar();
   showPostList();
