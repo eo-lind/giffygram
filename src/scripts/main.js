@@ -1,14 +1,15 @@
 // Can you explain what is being imported here?
 import {
-  getPosts,
-  getUsers,
-  getLoggedInUser,
-  createPost,
-  usePostCollection,
   countPosts,
+  createPost,
   deletePost,
+  getLoggedInUser,
+  getPosts,
   getSinglePost,
+  getUsers,
+  logoutUser,
   updatePost,
+  usePostCollection,
 } from "./data/DataManager.js";
 import { PostList } from "./feed/PostList.js";
 import { NavBar } from "./nav/NavBar.js";
@@ -68,7 +69,8 @@ const applicationElement = document.querySelector(".giffygram");
 // listen for clicks on logout
 applicationElement.addEventListener("click", (event) => {
   if (event.target.id === "logout") {
-    console.log("You clicked on logout");
+    logoutUser();
+    console.log(getLoggedInUser());
   }
 });
 

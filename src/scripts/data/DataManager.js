@@ -1,7 +1,11 @@
-const loggedInUser = {
+let loggedInUser = {
   id: 1,
   name: "Rupert",
   email: "rupert@bn.com",
+};
+
+export const logoutUser = () => {
+  loggedInUser = {};
 };
 
 export const getLoggedInUser = () => {
@@ -72,7 +76,7 @@ export const countPosts = () => {
   return fetch("http://localhost:8088/posts")
     .then((response) => response.json())
     .then((parsedResponse) => {
-      console.log(parsedResponse.length);
+      // console.log(parsedResponse.length);
       return parsedResponse;
     });
 };
@@ -87,7 +91,6 @@ export const deletePost = (postId) => {
     },
   }).then((response) => response.json());
 };
-
 
 // EDIT POST
 
