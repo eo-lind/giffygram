@@ -130,7 +130,7 @@ applicationElement.addEventListener("click", (event) => {
 applicationElement.addEventListener("click", (event) => {
   if (event.target.id === "logout") {
     logoutUser();
-    console.log(getLoggedInUser());
+    // console.log(getLoggedInUser());
     sessionStorage.clear();
     checkForUser();
   }

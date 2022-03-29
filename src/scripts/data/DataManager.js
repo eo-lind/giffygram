@@ -6,7 +6,7 @@ export const loginUser = (userObj) => {
   )
     .then((response) => response.json())
     .then((parsedUser) => {
-      console.log("parsedUser", parsedUser);
+      // console.log("parsedUser", parsedUser);
       if (parsedUser.length > 0) {
         setLoggedInUser(parsedUser[0]);
         return getLoggedInUser();
@@ -84,7 +84,7 @@ export const getPosts = () => {
   return fetch(`http://localhost:8088/posts?_expand=user&_sort=id&_order=desc`)
     .then((response) => response.json())
     .then((parsedResponse) => {
-      console.log("data with user", parsedResponse);
+      // console.log("data with user", parsedResponse);
       postCollection = parsedResponse;
       return parsedResponse;
     });
