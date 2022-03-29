@@ -7,6 +7,7 @@ import {
   getPosts,
   getSinglePost,
   getUsers,
+  loginUser,
   logoutUser,
   setLoggedInUser,
   updatePost,
@@ -85,6 +86,28 @@ checkForUser();
 const applicationElement = document.querySelector(".giffygram");
 
 // how we react to the click (this looks for more specific target IDs):
+
+// when user completes login form and clicks submit button, this collects their info in an object, checks the db to see if they're an existing user. If so, it will set them as the user in session Storage and invoke startGiffyGram(). If they aren't already in the db, they will be prompted to register.
+applicationElement.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.id === "login__submit") {
+    //collect all the details into an object
+    const userObject = {
+      name: document.querySelector("input[name='name']").value,
+      email: document.querySelector("input[name='email']").value,
+    };
+    loginUser(userObject).then((dbUserObj) => {
+      if (dbUserObj) {
+        sessionStorage.setItem("user", JSON.stringify(dbUserObj));
+        startGiffyGram();
+      } else {
+        //got a false value - no user
+        const entryElement = document.querySelector(".entryForm");
+        entryElement.innerHTML = `<p class="center">That user does not exist. Please try again or register for your free account.</p> ${LoginForm()} <hr/> <hr/> ${RegisterForm()}`;
+      }
+    });
+  }
+});
 
 // listen for clicks on logout
 applicationElement.addEventListener("click", (event) => {

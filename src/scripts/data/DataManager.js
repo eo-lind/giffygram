@@ -1,5 +1,21 @@
 let loggedInUser = {};
 
+export const loginUser = (userObj) => {
+  return fetch(
+    `http://localhost:8088/users?name=${userObj.name}&email=${userObj.email}`
+  )
+    .then((response) => response.json())
+    .then((parsedUser) => {
+      console.log("parsedUser", parsedUser);
+      if (parsedUser.length > 0) {
+        setLoggedInUser(parsedUser[0]);
+        return getLoggedInUser();
+      } else {
+        return false;
+      }
+    });
+};
+
 export const logoutUser = () => {
   loggedInUser = {};
 };
