@@ -1,9 +1,43 @@
-const loggedInUser = {
-  id: 1,
-  name: "Rupert",
-  email: "rupert@bn.com",
+let loggedInUser = {};
+
+export const loginUser = (userObj) => {
+  return fetch(
+    `http://localhost:8088/users?name=${userObj.name}&email=${userObj.email}`
+  )
+    .then((response) => response.json())
+    .then((parsedUser) => {
+      console.log("parsedUser", parsedUser);
+      if (parsedUser.length > 0) {
+        setLoggedInUser(parsedUser[0]);
+        return getLoggedInUser();
+      } else {
+        return false;
+      }
+    });
 };
 
+export const registerUser = (userObj) => {
+  return fetch(`http://localhost:8088/users`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userObj),
+  })
+    .then((response) => response.json())
+    .then((parsedUser) => {
+      setLoggedInUser(parsedUser);
+      return getLoggedInUser();
+    });
+};
+
+export const logoutUser = () => {
+  loggedInUser = {};
+};
+
+export const setLoggedInUser = (userObj) => {
+  loggedInUser = userObj;
+};
 export const getLoggedInUser = () => {
   return loggedInUser;
 };
@@ -36,7 +70,6 @@ export const createUserObj = (userObj) => {
 //     })
 // }
 
-// begin filter addition
 let postCollection = [];
 
 export const usePostCollection = () => {
@@ -45,16 +78,17 @@ export const usePostCollection = () => {
   //The spread operator makes this quick work
   return [...postCollection];
 };
+
 export const getPosts = () => {
-  return fetch("http://localhost:8088/posts?_sort=id&_order=desc")
+  const userId = getLoggedInUser().id;
+  return fetch(`http://localhost:8088/posts?_expand=user&_sort=id&_order=desc`)
     .then((response) => response.json())
     .then((parsedResponse) => {
+      console.log("data with user", parsedResponse);
       postCollection = parsedResponse;
       return parsedResponse;
     });
 };
-
-// end filter addition
 
 export const createPost = (postObj) => {
   return fetch("http://localhost:8088/posts", {
@@ -72,7 +106,7 @@ export const countPosts = () => {
   return fetch("http://localhost:8088/posts")
     .then((response) => response.json())
     .then((parsedResponse) => {
-      console.log(parsedResponse.length);
+      // console.log(parsedResponse.length);
       return parsedResponse;
     });
 };
@@ -87,7 +121,6 @@ export const deletePost = (postId) => {
     },
   }).then((response) => response.json());
 };
-
 
 // EDIT POST
 
