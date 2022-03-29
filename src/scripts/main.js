@@ -8,6 +8,7 @@ import {
   getSinglePost,
   getUsers,
   logoutUser,
+  setLoggedInUser,
   updatePost,
   usePostCollection,
 } from "./data/DataManager.js";
@@ -16,6 +17,8 @@ import { NavBar } from "./nav/NavBar.js";
 import { Footer } from "./nav/Footer.js";
 import { PostEntry } from "./feed/PostEntry.js";
 import { PostEdit } from "./feed/PostEdit.js";
+import { LoginForm } from "../../auth/LoginForm.js";
+import { RegisterForm } from "../../auth/RegisterForm.js";
 
 const showNavBar = () => {
   //Get a reference to the location on the DOM where the nav will display
@@ -48,7 +51,7 @@ const showPostCount = () => {
   const entryElement = document.querySelector("#postCount");
   entryElement.innerHTML = countPosts();
 };
-//
+
 const startGiffyGram = () => {
   showNavBar();
   showPostList();
@@ -57,7 +60,24 @@ const startGiffyGram = () => {
   showPostEntry();
 };
 
-startGiffyGram();
+const checkForUser = () => {
+  if (sessionStorage.getItem("user")) {
+    setLoggedInUser(JSON.parse(sessionStorage.getItem("user")));
+    startGiffyGram();
+  } else {
+    showLoginRegister();
+  }
+};
+
+const showLoginRegister = () => {
+  showNavBar();
+  const entryElement = document.querySelector(".entryForm");
+  entryElement.innerHTML = `${LoginForm()} <hr/> <hr/> ${RegisterForm()}`;
+  const postElement = document.querySelector(".postList");
+  postElement.innerHTML = "";
+};
+
+checkForUser();
 
 // *********** EVENT LISTENERS ***********
 

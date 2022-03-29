@@ -1,13 +1,12 @@
-let loggedInUser = {
-  id: 1,
-  name: "Rupert",
-  email: "rupert@bn.com",
-};
+let loggedInUser = {};
 
 export const logoutUser = () => {
   loggedInUser = {};
 };
 
+export const setLoggedInUser = (userObj) => {
+  loggedInUser = userObj;
+};
 export const getLoggedInUser = () => {
   return loggedInUser;
 };
