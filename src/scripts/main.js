@@ -9,6 +9,7 @@ import {
   getUsers,
   loginUser,
   logoutUser,
+  registerUser,
   setLoggedInUser,
   updatePost,
   usePostCollection,
@@ -87,7 +88,7 @@ const applicationElement = document.querySelector(".giffygram");
 
 // how we react to the click (this looks for more specific target IDs):
 
-// when user completes login form and clicks submit button, this collects their info in an object, checks the db to see if they're an existing user. If so, it will set them as the user in session Storage and invoke startGiffyGram(). If they aren't already in the db, they will be prompted to register.
+// when user completes login form and clicks submit button, this collects their info in an object, checks the db to see if they're an existing user. If so, it will set them as the user in sessionStorage and invoke startGiffyGram(). If they aren't already in the db, they will be prompted to register.
 applicationElement.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.id === "login__submit") {
@@ -109,11 +110,29 @@ applicationElement.addEventListener("click", (event) => {
   }
 });
 
+// when user completes the register form and clicks submit button, this collects their info into an object and uses "POST" method to add them to the db. It then takes the response and sets them as logged in user as well as sets them as user in sessionStorage. It then invokes startGiffyGram()
+applicationElement.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.id === "register__submit") {
+    //collect all the details into an object
+    const userObject = {
+      name: document.querySelector("input[name='registerName']").value,
+      email: document.querySelector("input[name='registerEmail']").value,
+    };
+    registerUser(userObject).then((dbUserObj) => {
+      sessionStorage.setItem("user", JSON.stringify(dbUserObj));
+      startGiffyGram();
+    });
+  }
+});
+
 // listen for clicks on logout
 applicationElement.addEventListener("click", (event) => {
   if (event.target.id === "logout") {
     logoutUser();
     console.log(getLoggedInUser());
+    sessionStorage.clear();
+    checkForUser();
   }
 });
 
