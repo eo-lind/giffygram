@@ -38,6 +38,7 @@ export const logoutUser = () => {
 export const setLoggedInUser = (userObj) => {
   loggedInUser = userObj;
 };
+
 export const getLoggedInUser = () => {
   return loggedInUser;
 };
@@ -59,6 +60,7 @@ export const createUserObj = (userObj) => {
       return parsedResponse;
     });
 };
+
 // TODO delete this when filter works
 // export const getPosts = () => {
 
@@ -85,7 +87,7 @@ export const getPosts = () => {
     .then((response) => response.json())
     .then((parsedResponse) => {
       // console.log("data with user", parsedResponse);
-      postCollection = parsedResponse;
+      // postCollection = parsedResponse;
       return parsedResponse;
     });
 };
