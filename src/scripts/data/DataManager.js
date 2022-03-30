@@ -6,7 +6,7 @@ export const loginUser = (userObj) => {
   )
     .then((response) => response.json())
     .then((parsedUser) => {
-      console.log("parsedUser", parsedUser);
+      // console.log("parsedUser", parsedUser);
       if (parsedUser.length > 0) {
         setLoggedInUser(parsedUser[0]);
         return getLoggedInUser();
@@ -38,6 +38,7 @@ export const logoutUser = () => {
 export const setLoggedInUser = (userObj) => {
   loggedInUser = userObj;
 };
+
 export const getLoggedInUser = () => {
   return loggedInUser;
 };
@@ -59,6 +60,7 @@ export const createUserObj = (userObj) => {
       return parsedResponse;
     });
 };
+
 // TODO delete this when filter works
 // export const getPosts = () => {
 
@@ -84,8 +86,8 @@ export const getPosts = () => {
   return fetch(`http://localhost:8088/posts?_expand=user&_sort=id&_order=desc`)
     .then((response) => response.json())
     .then((parsedResponse) => {
-      console.log("data with user", parsedResponse);
-      postCollection = parsedResponse;
+      // console.log("data with user", parsedResponse);
+      // postCollection = parsedResponse;
       return parsedResponse;
     });
 };
